@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aioria Magic League</title>
+  <link rel="stylesheet" href="style_navbar.css" />
+  <style>
+   .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 0px;
+      gap: 50px; 
+    }
+
+   .img-display {
+      max-width: 600px;
+      cursor: pointer;
+      }
+
+     .img-click {
+       max-width: 800%;
+      display: flex;
+       margin-top: 30px;
+      margin-left: 40px;
+      cursor: pointer;
+      }
+  </style>
+</head>
+
+<body>
+  <!-- Logo fora do head -->
+  <img class="logo-Aioria" src="Imagens/Logo Aioria League.png" alt="Logo Aioria League" />
+
+  <header>
+    <nav>
+      <a class="logo" href="#">Players Campeonato</a>
+      <div class="mobile-menu">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+      <ul class="nav-list">   
+        <li><a href="Index.html">Início</a></li>
+        <li><a href="Aioria Magic League 2025.pdf">Edital</a></li>
+        <li><a href="Players.html">Players</a></li>
+        <li><a href="Historico.html">Historico Camp</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <!-- Imagem com mapa clicável -->
+      <img src="Imagens/HistJogadores.jpg" usemap="#playerMap" alt="Histórico Jogadores" class="img-click" />
+
+      <!-- Imagem que muda -->
+      <img src="players/Feminazi.png" alt="Imagem resultado" class="img-display" id="imgDisplay">
+    </div>
+
+    <!-- Mapa da imagem -->
+    <map name="playerMap">
+      <area shape="rect" coords="0,37,581,69" alt="FEMINAZI" onclick="trocarImagem('players/Feminazi.png')" />
+      <area shape="rect" coords="0,69,581,101" alt="YOSHI" onclick="trocarImagem('players/Yoshi.png')" />
+      <area shape="rect" coords="0,101,581,133" alt="AIORIA" onclick="trocarImagem('players/Aioria.png')" />
+      <area shape="rect" coords="0,133,581,165" alt="TERROR" onclick="trocarImagem('players/Terror.png')" />
+      <area shape="rect" coords="0,165,581,197" alt="CAVEIRA" onclick="trocarImagem('players/Caveira.png')" />
+      <area shape="rect" coords="0,197,581,229" alt="BOLOFO" onclick="trocarImagem('players/Bolofo.png')" />
+      <area shape="rect" coords="0,229,581,261" alt="COXINHA" onclick="trocarImagem('players/Coxinha.png')" />
+      <area shape="rect" coords="0,261,581,293" alt="VAGALO" onclick="trocarImagem('players/Vagalo.png')" />
+      <area shape="rect" coords="0,293,581,325" alt="CUPINCHA" onclick="trocarImagem('players/Cupincha.png')" />
+      <area shape="rect" coords="0,325,581,357" alt="DIABETES" onclick="trocarImagem('players/Diabetes.png')" />
+      <area shape="rect" coords="0,357,581,389" alt="MAMUTE" onclick="trocarImagem('players/Mamute.png')" />
+      <area shape="rect" coords="0,389,581,421" alt="JEAN WILLS" onclick="trocarImagem('players/Jean Wills.png')" />
+      <area shape="rect" coords="0,421,581,453" alt="SAORI" onclick="trocarImagem('players/Saiori.png')" />
+      <area shape="rect" coords="0,453,581,485" alt="BIAL" onclick="trocarImagem('players/Bial.png')" />
+      <area shape="rect" coords="0,485,581,517" alt="PRETO" onclick="trocarImagem('players/Preto.png')" />
+      <area shape="rect" coords="0,517,581,549" alt="PIKACHU" onclick="trocarImagem('players/Pikachu.png')" />
+      <area shape="rect" coords="0,549,581,581" alt="MESTRE" onclick="trocarImagem('players/Mestre.png')" />
+      <!-- Adicione mais áreas conforme a necessidade -->
+    </map>
+  </main>
+
+  <script>
+    function trocarImagem(caminho) {
+      document.getElementById('imgDisplay').src = caminho;
+    }
+  </script>
+
+  <script src="mobile_navbar.js"></script>
+</body>
+</html>
