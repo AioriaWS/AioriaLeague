@@ -36,7 +36,7 @@ main {
   background-size:cover;
   height: 100vh;
   width: 100%;
-  background-position-y: -30px;
+  
 }
 
 .nav-list {
@@ -121,51 +121,125 @@ button {
       font-size: 16px;
     }
 
-.logo-Aioria{ 
+/*.logo-Aioria{ 
   display: flex;
   height: 53px;
   margin-left: 50px;
   position: absolute;
+}*/
+
+/* Garante que tudo se ajuste corretamente  22/07  */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+} 
+
+/* Ajuste da logo */
+
+.logo-Aioria {
+  max-width: 150px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
 }
 
-/*
-.Historico-2018{
-display: flex;
- height: 300px;
- margin-left: 80px;
- margin-top: 50px;
-position: absolute ;
+/* Navbar principal */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #222;
+  padding: 10px 20px;
+  color: white;
 }
 
-.Historico-2019{
-display: flex;
- height: 355px;
- margin-left: 700px;
- margin-top: 50px;
-position: absolute ;
+.nav-list {
+  display: flex;
+  list-style: none;
 }
 
-.Historico-2020{
-display: flex;
- height: 382px;
- margin-left: 80px;
- margin-top: 440px;
-position: absolute ;
+.nav-list li {
+  margin-left: 20px;
 }
 
-.Historico-2021{
-display: flex;
- height: 298px;
- margin-left: 700px;
- margin-top: 440px;
-position: absolute ;
+.nav-list li a {
+  color: white;
+  text-decoration: none;
 }
 
-.Historico-2024{
-display: flex;
- height: 355px;
- margin-left: 80px;
- margin-top: 860px;
-position: absolute ;
+/* Menu mobile escondido por padrão */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
 }
-*/
+
+.mobile-menu div {
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 4px;
+  transition: all 0.3s ease;
+}
+
+/* Container central e imagem */
+.container {
+  text-align: center;
+  margin-top: 100px;
+  padding: 10px;
+}
+
+#imagem {
+  max-width: 100%;
+  height: auto;
+  margin: 20px auto;
+  display: block;
+}
+
+/* Botões */
+.botoes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.botoes button {
+  padding: 10px 16px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* === MEDIA QUERIES === */
+@media (max-width: 768px) {
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    background-color: #222;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 10px 0;
+  }
+
+  .nav-list.active {
+    display: flex;
+  }
+
+  .mobile-menu {
+    display: flex;
+  }
+
+  nav {
+    position: relative;
+  }
+
+  .logo-Aioria {
+    max-width: 120px;
+  }
+}
