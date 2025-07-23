@@ -42,3 +42,11 @@ const mobileNavbar = new MobileNavbar(
   ".nav-list li",
 );
 mobileNavbar.init();
+
+/* incluir 22/07 */
+/*const mobileMenu = document.querySelector('.mobile-menu');
+const navList = document.querySelector('.nav-list');*/
+
+mobileMenu.addEventListener('click', () => {
+  navList.classList.toggle('active');
+});
